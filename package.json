@@ -1,0 +1,16 @@
+{
+  "name": "test-dawg-trie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "dongyuwei",
+  "license": "MIT",
+  "dependencies": {
+    "dawg-lookup": "^2.2.1",
+    "node-ternary-search-trie": "^5.4.3"
+  }
+}
