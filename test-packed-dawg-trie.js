@@ -13,10 +13,12 @@ console.timeEnd("time3");
 console.time("time4");
 console.log(ptrie.isWord("test"));
 console.log(ptrie.isWord("testhahahah"));
-const completions = ptrie.completions("pref").slice(0, 50);
-completions.sort((a, b) => {
-  return words[b] - words[a];
-});
+const completions = ptrie
+  .completions("ab")
+  .sort((a, b) => {
+    return words[b] - words[a];
+  })
+  .slice(0, 50);
 console.log(completions);
 console.log(process.pid, process.memoryUsage());
 
