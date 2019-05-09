@@ -3,7 +3,7 @@ const fs = require("fs");
 
 console.time("time1");
 
-const words = require("./google_227800_words.json");
+const words = require("./words_with_frequency_and_translation_and_ipa.json");
 console.timeEnd("time1");
 
 const trie = new Trie(Object.keys(words).join(" "));

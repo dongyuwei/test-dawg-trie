@@ -1,6 +1,6 @@
 const PTrie = require("dawg-lookup/lib/ptrie").PTrie;
 const fs = require("fs");
-const words = require("./google_227800_words.json");
+const words = require("./words_with_frequency_and_translation_and_ipa.json");
 
 console.time("time2");
 const packed = fs.readFileSync("./packed.txt", "utf-8");
@@ -16,12 +16,13 @@ console.time("time4");
 console.log(ptrie.isWord("test"));
 console.log(ptrie.isWord("testhahahah"));
 const completions = ptrie
-  .completions("ab")
+  .completions("pre")
   .sort((a, b) => {
     return words[b] - words[a];
   })
   .slice(0, 50);
 console.log(completions);
 console.log(process.pid, process.memoryUsage());
+console.log(words[completions[1]]);
 
 console.timeEnd("time4");
