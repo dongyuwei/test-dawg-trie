@@ -4,6 +4,8 @@ const words = require("./google_227800_words.json");
 
 console.time("time2");
 const packed = fs.readFileSync("./packed.txt", "utf-8");
+// read packed from txt is faster than json, about 3~4ms
+// const packed = require("./packed.json").content;
 console.timeEnd("time2");
 
 console.time("time3");
