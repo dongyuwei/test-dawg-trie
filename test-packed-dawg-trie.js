@@ -18,11 +18,11 @@ console.log(ptrie.isWord("testhahahah"));
 const completions = ptrie
   .completions("pre")
   .sort((a, b) => {
-    return words[b] - words[a];
+    return words[b].frequency - words[a].frequency;
   })
   .slice(0, 50);
 console.log(completions);
 console.log(process.pid, process.memoryUsage());
-console.log(words[completions[1]]);
+console.log(words[completions[0]]);
 
 console.timeEnd("time4");
